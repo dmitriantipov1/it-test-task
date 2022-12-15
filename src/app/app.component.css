@@ -1,0 +1,147 @@
+.header {
+  justify-content: space-between;
+  padding: 15px 0px;
+  box-shadow: 0 3px 14px 1px rgba(152, 152, 152, 0.2);
+}
+
+.header-logo {
+  gap: 8px;
+}
+
+.header-logo__title {
+  width: 83px;
+  font-size: 24px;
+  font-weight: 800;
+  font-family: 'Muller Extra Bold';
+  letter-spacing: 1.44px;
+  color: var(--orange-light);
+}
+
+.header-menu {
+  gap: 50px;
+}
+
+.header-menu__item {
+  color: var(--brown-dark);
+  cursor: pointer;
+}
+
+/*SECTION 1*/
+
+.about-box__title {
+  font-size: 45px;
+  font-weight: 800;
+  font-family: 'Muller Extra Bold';
+  line-height: 55px;
+  color: var(--brown-light)
+}
+
+.orange {
+  color: var(--orange)
+}
+
+.about-box__items {
+  flex-wrap: wrap;
+  gap: 47px;
+  margin: 60px 0px;
+}
+
+.about-card__item {
+  gap: 18px;
+}
+
+.about-card__inner-box {
+  width: 222px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.about-card__title {
+  font-size: 16px;
+  font-family: "Muller Extra Bold";
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.about-card__text {
+  color: var(--brown-light);
+}
+
+.pizza-list__title {
+  font-size: 35px;
+  font-family: "Muller Bold";
+  text-align: center;
+  margin-bottom: 60px;
+  color: var( --light-very-brown);
+}
+
+.pizza-list__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.pizza-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 13px;
+  padding: 27px 15px 20px 15px;
+  width: 251px;
+  height: auto;
+  box-shadow: 0 3px 14px 1px rgba(152, 152, 152, 0.2);
+  background-color: #ffffff;
+}
+
+.pizza-card__img {
+  margin: 0 auto;
+  width: 200px;
+  height: auto;
+}
+
+.pizza-card__title {
+  font-family: "Muller Bold";
+  font-size: 18px;
+  color: var(--brown-very-dark);
+  text-align: center;
+}
+
+.pizza-card__text {
+  text-align: center;
+  line-height: 18px;
+}
+
+/*FOOTER*/
+
+.footer-wrapper {
+  justify-content: space-between;
+}
+
+.footer-text-box {
+  width: 367px;
+}
+
+.footer-text-box__title {
+  font-family: "Muller Extra Bold";
+  font-size: 35px;
+  color: var(--brown-light);
+}
+
+.footer-text-box__text {
+  margin-top: 70px;
+  line-height: 24px;
+  color: var(--brown-light);
+}
+
+.footer-form__wrapper {
+  width: 330px;
+}
+
+.footer-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
