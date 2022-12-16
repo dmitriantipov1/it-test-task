@@ -1,3 +1,9 @@
+<ul class="screen-menu" [class.active]="isOpenMenu">
+  <li class="header-menu__item">Пиццы</li>
+  <li class="header-menu__item">Напитки</li>
+  <li class="header-menu__item">Доставка и оплата</li>
+  <li class="header-menu__item">Контакты</li>
+</ul>
 <header class="header">
   <div class="container justify-space-between flex-center">
     <div class="header-logo flex-center">
@@ -9,6 +15,12 @@
       <li class="header-menu__item">Напитки</li>
       <li class="header-menu__item">Доставка и оплата</li>
       <li class="header-menu__item">Контакты</li>
+    </ul>
+    <ul class="burger-menu" [class.active]="isOpenMenu" (click)="toggleMenu()">
+      <li class="burger-menu__line"></li>
+      <li class="burger-menu__line"></li>
+      <li class="burger-menu__line"></li>
+      <li class="burger-menu__line"></li>
     </ul>
   </div>
 </header>
@@ -51,7 +63,7 @@
       </div>
       <button class="btn">Выбрать пиццу</button>
     </div>
-    <img src="../assets/images/pizza_big.png" alt="" class="about-img">
+    <img class="about-img" src="../assets/images/pizza_big.png" alt="" >
   </section>
   <section class="section pizza-list">
     <h3 class="pizza-list__title">Выберите свою любимую пиццу </h3>
@@ -135,7 +147,7 @@
         <button class="btn">Оформить заказ</button>
       </form>
     </div>
-    <img src="../assets/images/pizzzzza.png" alt="">
+    <img class="footer_img" src="../assets/images/pizzzzza.png" alt="">
   </div>
 </footer>
 
