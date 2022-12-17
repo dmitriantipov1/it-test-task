@@ -4,7 +4,7 @@ image: node:16.15.1
 before_script: []
 pages:
   script:
-    - npm install -g @angular/cli
+    - npm install -g @angular/cli@14.2.10
     - npm install
     - ng build --prod --base-href /it-test/
     - mkdir -p public
