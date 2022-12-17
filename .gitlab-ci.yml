@@ -6,7 +6,7 @@ pages:
   script:
     - npm install -g @angular/cli@14.2.10
     - npm install
-    - ng build --prod --base-href /it-test/
+    - ng build
     - mkdir -p public
     - mv dist/app/* public/
   artifacts:
