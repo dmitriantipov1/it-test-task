@@ -29,6 +29,17 @@
   gap: 24px;
 }
 
+.alert-container {
+  position: relative;
+}
+
+.alert {
+  position: absolute;
+  top: 5px;
+  color: #ed3003;
+  font-size: 10px;
+}
+
 @media (max-width: 858px){
   .footer-wrapper {
     flex-direction: column;

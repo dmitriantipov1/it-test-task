@@ -81,6 +81,12 @@ li {
   cursor: pointer;
 }
 
+.btn.disabled {
+  opacity: 60%;
+  background-color: var(--orange);
+  cursor: not-allowed;
+}
+
 .form-control {
   width: 100%;
   font-family: "Muller Regular";
@@ -88,4 +94,5 @@ li {
   border: 1px solid var(--brown-light);
   color: #cba86e;
   padding: 22px;
+  outline: none;
 }
