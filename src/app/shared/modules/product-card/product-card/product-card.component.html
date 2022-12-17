@@ -1,5 +1,8 @@
 <div class="pizza-card">
-  <img class="pizza-card__img" [src]="'../assets/images/pizza/' + product.image" alt="">
+  <img class="pizza-card__img"
+       [src]="'../assets/images/pizza/' + product.image"
+       (click)="openPhoto.emit('../assets/images/pizza/' + product.image)"
+       alt="">
   <h5 class="pizza-card__title">{{product.title}}</h5>
   <p class="pizza-card__text">{{product.description}}</p>
   <button class="btn">В корзину</button>

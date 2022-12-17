@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {ProductCardInterface} from "../../../../types/ProductCard.interface";
 
 @Component({
@@ -8,5 +8,6 @@ import {ProductCardInterface} from "../../../../types/ProductCard.interface";
 })
 export class ProductCardComponent {
   @Input() product: ProductCardInterface
+  @Output() openPhoto = new EventEmitter();
 
 }
