@@ -43,9 +43,11 @@
           </div>
         </div>
         <app-loader style="text-align: center" *ngIf="isLoading$ | async"></app-loader>
-        <button *ngIf="!(isLoading$ | async)" class="btn" [class.disabled]="form.invalid">Оформить заказ</button>
+        <button *ngIf="!(isLoading$ | async)" class="btn" [class.disabled]="form.invalid" [disabled]="form.invalid">Оформить заказ</button>
       </form>
     </div>
     <img class="footer_img" src="../assets/images/pizzzzza.png" alt="">
   </div>
 </footer>
+
+<app-popup [text]="'Спасибо за заказ'"></app-popup>
