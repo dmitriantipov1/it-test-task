@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {OrderService} from "../../../../../../shared/services/order.service";
+import {BehaviorSubject} from "rxjs";
 
 @Component({
   selector: 'app-footer',
@@ -8,15 +10,23 @@ import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 })
 export class FooterComponent implements OnInit {
   form: FormGroup;
+  isLoading$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  isNotificationWindow$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    private orderService: OrderService) {
+  }
 
   ngOnInit(): void {
     this.initializeValues();
   }
 
   public send(): void {
-    console.log(this.form.value);
+    this.isLoading$.next(true);
+    this.orderService.makeOrder(this.form.value).subscribe({
+      next: (res) => setTimeout(() => this.openNotificationWindow(), 2000)
+    });
   }
 
   private initializeValues(): void {
@@ -32,5 +42,11 @@ export class FooterComponent implements OnInit {
     if (point === '.') {
       $event.preventDefault();
     }
+  }
+
+  private openNotificationWindow(): void {
+    this.isNotificationWindow$.next(true);
+    this.isLoading$.next(false);
+    setTimeout(() => this.isNotificationWindow$.next(false), 3000)
   }
 }

@@ -12,8 +12,10 @@
     <div class="footer-form__wrapper">
       <form class="footer-form" [formGroup]="form" (ngSubmit)="send()">
         <div class="form-group">
-          <input class="form-control" (keydown)="checkValue($event)" type="text" placeholder="Ваше имя *" formControlName="name">
-          <div class="alert-container" *ngIf="form.controls['name'].invalid && (form.controls['name'].dirty || form.controls['name'].touched)">
+          <input class="form-control" (keydown)="checkValue($event)" type="text" placeholder="Ваше имя *"
+                 formControlName="name">
+          <div class="alert-container"
+               *ngIf="form.controls['name'].invalid && (form.controls['name'].dirty || form.controls['name'].touched)">
             <span class="alert" *ngIf="form.controls['name'].errors?.['required']">
                  Введите ваше имя
             </span>
@@ -21,7 +23,8 @@
         </div>
         <div class="form-group">
           <input class="form-control" type="text" placeholder="Адрес доставки *" formControlName="address">
-          <div class="alert-container" *ngIf="form.controls['address'].invalid && (form.controls['address'].dirty || form.controls['address'].touched)">
+          <div class="alert-container"
+               *ngIf="form.controls['address'].invalid && (form.controls['address'].dirty || form.controls['address'].touched)">
             <span class="alert" *ngIf="form.controls['address'].errors?.['required']">
                  Введите адрес доставки
             </span>
@@ -29,7 +32,8 @@
         </div>
         <div class="form-group">
           <input class="form-control" type="tel" placeholder="Телефон *" formControlName="phone">
-          <div class="alert-container" *ngIf="form.controls['phone'].invalid && (form.controls['phone'].dirty || form.controls['phone'].touched)">
+          <div class="alert-container"
+               *ngIf="form.controls['phone'].invalid && (form.controls['phone'].dirty || form.controls['phone'].touched)">
             <span class="alert" *ngIf="form.controls['phone'].errors?.['required']">
                  Введите номер телефона
             </span>
@@ -38,7 +42,8 @@
             </span>
           </div>
         </div>
-        <button class="btn" [class.disabled]="form.invalid">Оформить заказ</button>
+        <app-loader style="text-align: center" *ngIf="isLoading$ | async"></app-loader>
+        <button *ngIf="!(isLoading$ | async)" class="btn" [class.disabled]="form.invalid">Оформить заказ</button>
       </form>
     </div>
     <img class="footer_img" src="../assets/images/pizzzzza.png" alt="">

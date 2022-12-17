@@ -19,7 +19,7 @@ import {FooterModule} from "./components/layout/modules/footer/footer.module";
     ProductsModule,
     HeaderModule,
     ContentModule,
-    FooterModule
+    FooterModule,
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

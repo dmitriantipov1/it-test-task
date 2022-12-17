@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {FooterComponent} from "./components/footer/footer.component";
 import {ReactiveFormsModule} from "@angular/forms";
-
+import {LoaderModule} from "../../../../shared/modules/loader/loader.module";
 
 
 @NgModule({
@@ -10,7 +10,8 @@ import {ReactiveFormsModule} from "@angular/forms";
   exports: [FooterComponent],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LoaderModule,
   ]
 })
 export class FooterModule { }

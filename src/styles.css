@@ -69,6 +69,7 @@ li {
 }
 
 .section {
+  position: relative;
   margin-top: 130px;
 }
 
