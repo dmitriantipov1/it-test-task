@@ -8,6 +8,6 @@ export class ApiService {
 
   // Fake response
   getProductsFromApi(): Observable<ProductCardInterface[]> {
-    return of(productsData).pipe(debounceTime(2000));
+      return of(productsData);
   }
 }

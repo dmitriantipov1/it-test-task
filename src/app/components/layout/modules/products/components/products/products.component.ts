@@ -11,14 +11,16 @@ import {ProductCardInterface} from "../../../../../../types/ProductCard.interfac
 export class ProductsComponent implements OnInit {
   public products$: Observable<ProductCardInterface[]> | null;
 
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService) {
+  }
 
   ngOnInit(): void {
     this.fetchData();
   }
 
   fetchData(): void {
-  this.products$ = this.productService.getProducts();
+    setTimeout(() => {
+      this.products$ = this.productService.getProducts();
+    }, 1500);
   }
-
 }
