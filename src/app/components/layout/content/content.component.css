@@ -1,0 +1,56 @@
+.about-box__title {
+  font-size: 45px;
+  font-weight: 800;
+  font-family: 'Muller Extra Bold';
+  line-height: 55px;
+  color: var(--brown-light)
+}
+
+.orange {
+  color: var(--orange)
+}
+
+.about-box__items {
+  flex-wrap: wrap;
+  gap: 47px;
+  margin: 60px 0px;
+}
+
+.about-card__item {
+  gap: 18px;
+}
+
+.about-card__inner-box {
+  width: 222px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.about-card__title {
+  font-size: 16px;
+  font-family: "Muller Extra Bold";
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--orange);
+}
+
+.about-card__text {
+  color: var(--brown-light);
+}
+
+@media (max-width: 858px){
+  .about {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .about-box {
+    text-align: center;
+  }
+  .about-box__items {
+    justify-content: center;
+  }
+  .about-img {
+    width: 100%;
+  }
+}

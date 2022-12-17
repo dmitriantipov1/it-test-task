@@ -1,0 +1,26 @@
+<ul class="screen-menu" [class.active]="isOpenMenu">
+  <li class="header-menu__item">Пиццы</li>
+  <li class="header-menu__item">Напитки</li>
+  <li class="header-menu__item">Доставка и оплата</li>
+  <li class="header-menu__item">Контакты</li>
+</ul>
+<header class="header">
+  <div class="container justify-space-between flex-center">
+    <div class="header-logo flex-center">
+      <img class="header-logo__image" src="../assets/images/pizza.png">
+      <h4 class="header-logo__title">Pizza cheff</h4>
+    </div>
+    <ul class="header-menu flex-center">
+      <li class="header-menu__item">Пиццы</li>
+      <li class="header-menu__item">Напитки</li>
+      <li class="header-menu__item">Доставка и оплата</li>
+      <li class="header-menu__item">Контакты</li>
+    </ul>
+    <ul class="burger-menu" [class.active]="isOpenMenu" (click)="toggleMenu()">
+      <li class="burger-menu__line"></li>
+      <li class="burger-menu__line"></li>
+      <li class="burger-menu__line"></li>
+      <li class="burger-menu__line"></li>
+    </ul>
+  </div>
+</header>

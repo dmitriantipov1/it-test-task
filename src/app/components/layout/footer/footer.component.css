@@ -1,0 +1,43 @@
+.footer-wrapper {
+  justify-content: space-between;
+}
+
+.footer-text-box {
+  width: 367px;
+}
+
+.footer-text-box__title {
+  font-family: "Muller Extra Bold";
+  font-size: 35px;
+  color: var(--brown-light);
+}
+
+.footer-text-box__text {
+  margin-top: 70px;
+  line-height: 24px;
+  color: var(--brown-light);
+}
+
+.footer-form__wrapper {
+  width: 330px;
+}
+
+.footer-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 858px){
+  .footer-wrapper {
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+  }
+  .footer-text-box,
+  .footer-form__wrapper,
+  .footer_img {
+    width: 100%;
+  }
+}
