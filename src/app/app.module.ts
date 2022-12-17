@@ -1,24 +1,27 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/layout/header/header.component';
-import { FooterComponent } from './components/layout/footer/footer.component';
-import { ContentComponent } from './components/layout/content/content.component';
-import { ProductsComponent } from './components/layout/products/products.component';
+import {AppComponent} from './app.component';
+import {ApiService} from "./shared/services/api.service";
+import {ProductCardModule} from "./shared/modules/product-card/product-card.module";
+import {ProductsModule} from "./components/layout/modules/products/products.module";
+import {HeaderModule} from "./components/layout/modules/header/header.module";
+import {ContentModule} from "./components/layout/modules/content/content.module";
+import {FooterModule} from "./components/layout/modules/footer/footer.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    ContentComponent,
-    ProductsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ProductCardModule,
+    ProductsModule,
+    HeaderModule,
+    ContentModule,
+    FooterModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

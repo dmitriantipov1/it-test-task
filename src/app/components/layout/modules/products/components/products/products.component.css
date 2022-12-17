@@ -1,0 +1,14 @@
+.pizza-list__title {
+  font-size: 35px;
+  font-family: "Muller Bold";
+  text-align: center;
+  margin-bottom: 60px;
+  color: var( --light-very-brown);
+}
+
+.pizza-list__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
