@@ -12,6 +12,7 @@ import {PopupService} from "../../../../../../shared/modules/popup-window/servic
 export class FooterComponent implements OnInit {
   form: FormGroup;
   isLoading$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  isOpenModal$ = this.popupService.isModalOpen$;
 
   constructor(
     private fb: FormBuilder,

@@ -1,5 +1,4 @@
-import {Component, ElementRef, HostListener, Input, OnInit, ViewChild} from '@angular/core';
-import {BehaviorSubject} from "rxjs";
+import {Component, ElementRef, HostListener, Input} from '@angular/core';
 import {PopupService} from "../services/popup.service";
 
 @Component({
@@ -9,15 +8,13 @@ import {PopupService} from "../services/popup.service";
 })
 export class PopupComponent {
   @Input() text: string;
-  isOpenModal$ = this.popupService.isModalOpen$;
 
-
-  constructor(private elRef: ElementRef, private popupService: PopupService) {
+  constructor(private ref: ElementRef, private popupService: PopupService) {
   }
 
-  @HostListener('document:click', ['$event'])
+  @HostListener('document: click', ['$event'])
   clickOut(event: Event): void {
-    if (this.elRef && !this.elRef.nativeElement.contains(event.target)) {
+    if (!this.ref.nativeElement.contains(event.target)) {
       this.popupService.modalToggle(false);
     }
   }

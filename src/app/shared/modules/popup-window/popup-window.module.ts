@@ -6,7 +6,7 @@ import {PopupService} from "./services/popup.service";
 
 @NgModule({
   declarations: [
-    PopupComponent
+    PopupComponent,
   ],
   imports: [
     CommonModule

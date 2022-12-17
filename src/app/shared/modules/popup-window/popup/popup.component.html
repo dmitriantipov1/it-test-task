@@ -1,9 +1,3 @@
-<ng-container *ngIf="isOpenModal$ | async">
-  <div class="popup-container">
-    <ng-container *ngIf="text">
-      <div class="popup-text">{{text}}</div>
-    </ng-container>
-
-  </div>
-</ng-container>
-
+<div class="popup-container">
+  <ng-content></ng-content>
+</div>

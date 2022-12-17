@@ -50,4 +50,6 @@
   </div>
 </footer>
 
-<app-popup [text]="'Спасибо за заказ'"></app-popup>
+<app-popup *ngIf="isOpenModal$ | async">
+  <div class="popup-text">Спасибо за заказ</div>
+</app-popup>
