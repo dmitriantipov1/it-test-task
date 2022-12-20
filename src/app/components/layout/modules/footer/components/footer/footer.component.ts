@@ -40,11 +40,8 @@ export class FooterComponent implements OnInit {
     })
   }
 
-  checkValue($event: KeyboardEvent) {
-    const point = $event.key;
-    if (point === '.') {
-      $event.preventDefault();
-    }
+  checkValue($event: KeyboardEvent): boolean {
+    return $event.key !== '.';
   }
 
   private openPopup(): void {

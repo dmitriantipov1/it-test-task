@@ -12,7 +12,7 @@
     <div class="footer-form__wrapper">
       <form class="footer-form" [formGroup]="form" (ngSubmit)="send()">
         <div class="form-group">
-          <input class="form-control" (keydown)="checkValue($event)" type="text" placeholder="Ваше имя *"
+          <input id="name" class="form-control" (keydown)="checkValue($event)" type="text" placeholder="Ваше имя *"
                  formControlName="name">
           <div class="alert-container"
                *ngIf="form.controls['name'].invalid && (form.controls['name'].dirty || form.controls['name'].touched)">

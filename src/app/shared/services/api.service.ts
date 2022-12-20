@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {debounceTime, Observable, of} from "rxjs";
+import {Observable, of} from "rxjs";
 import {ProductCardInterface} from "../../types/ProductCard.interface";
 import {productsData} from "../../productsData";
 import {FakeOrderResponseInterface} from "../../types/FakeOrderResponse.interface";
