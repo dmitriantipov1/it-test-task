@@ -41,7 +41,7 @@ export class FooterComponent implements OnInit {
   }
 
   checkValue($event: KeyboardEvent): boolean {
-    return $event.key !== '.';
+    return $event.keyCode !== 190 && $event.keyCode !== 110 && $event.keyCode !== 194;
   }
 
   private openPopup(): void {
